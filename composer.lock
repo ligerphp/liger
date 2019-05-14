@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78515e2dfb98675547d28268c303b9a7",
+    "content-hash": "8bb8188b01229ff4b76b14a5d2a21da3",
     "packages": [
         {
             "name": "doctrine/lexer",
@@ -175,16 +175,16 @@
         },
         {
             "name": "liger/framework",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ligerphp/framework.git",
-                "reference": "e4bcfe869a9fa679e71f21d097dc236aa3ec25ae"
+                "reference": "a9ff6d2c929c8b773d1ae548fc39e1a49df67e5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ligerphp/framework/zipball/e4bcfe869a9fa679e71f21d097dc236aa3ec25ae",
-                "reference": "e4bcfe869a9fa679e71f21d097dc236aa3ec25ae",
+                "url": "https://api.github.com/repos/ligerphp/framework/zipball/a9ff6d2c929c8b773d1ae548fc39e1a49df67e5e",
+                "reference": "a9ff6d2c929c8b773d1ae548fc39e1a49df67e5e",
                 "shasum": ""
             },
             "require": {
@@ -234,7 +234,7 @@
                 "liger",
                 "php"
             ],
-            "time": "2019-05-14T11:20:47+00:00"
+            "time": "2019-05-14T11:37:06+00:00"
         },
         {
             "name": "paragonie/random_compat",
