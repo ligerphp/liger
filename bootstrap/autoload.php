@@ -1,6 +1,13 @@
 <?php
 
+session_start();
 
-require __DIR__.'/../vendor/autoload.php';
+/**
+ * +++++++++++++++++++++++
+ * Load in all dependencies, composer to the rescue
+ * ------------------------
+ * 
+ */
+require __DIR__.'./../vendor/autoload.php';
 
 

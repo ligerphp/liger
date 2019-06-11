@@ -1,7 +1,0 @@
-{
-  "Login" : "register/login",
-  "Register" : "register/register",
-  "%USERNAME%" : {
-    "Logout" : "register/logout"
-  }
-}

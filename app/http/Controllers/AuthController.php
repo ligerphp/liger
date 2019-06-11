@@ -2,12 +2,13 @@
 namespace App\Http\Controllers;
 use Core\Router;
 use App\Models\Users;
-use App\Models\Login;
 use Core\Http\Request;
 use Core\Http\Response;
 use Core\View\View;
+use App\Http\Controllers\Controller;
 
-class AuthController  {
+
+class AuthController  extends Controller{
 
   public function onConstruct(){
     $this->view->setLayout('default');
@@ -21,29 +22,26 @@ class AuthController  {
 
 
   public function loginAction(Request $request) {
-    $loginModel = new Login();
-      // form validation
-      $this->request->csrfCheck();
-      $loginModel->assign($this->request->get());
-      $loginModel->validator();
-      if($loginModel->validationPassed()){
-        $user = Users::findByUsername($_POST['username']);
-        if($user && password_verify($this->request->get('password'), $user->password)) {
-          $remember = $loginModel->getRememberMeChecked();
-          $user->login($remember);
-          Router::redirect('');
-        }  else {
-          $loginModel->addErrorMessage('username','There is an error with your username or password');
-        }
-      }
 
-  }
+
+      /**
+       * By default the helper method performs csrf check and validations
+       */
+      $user = app('auth')->attempt();
+  if($user){
+    // dd($_SESSION);
+    return response()->withRedirect();
+}
+
+return response()->withRedirect('/auth/login');
+
+
+
+    
+}
 
   public function logoutAction() {
-    if(Users::currentUser()) {
-      Users::currentUser()->logout();
-    }
-    Router::redirect('home');
+    return session()->clear_user();
   }
 
   public function registerAction() {

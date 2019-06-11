@@ -9,8 +9,9 @@ class ErrorController {
     
     public function exception(FlattenException $exception){
 
-        $msg = 'Something went wrong! ('.$exception->getMessage().')';
-        return new Response($msg,$exception->getStatusCode());
+        $msg = 'Something went wrong! => ('.$exception->getMessage().')';
+        $res = ['message' => $msg,'code' => $exception->getStatusCode(),'status' => 'failed'];
+        return new Response(json_encode($res));
     }
 
 }

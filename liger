@@ -3,11 +3,11 @@
 
 require __DIR__.'./vendor/autoload.php';
 
-require_once('./config/config.php');
+require __DIR__ . './bootstrap/app.php';
 
+$app->start();
 
 $console = new Core\Console\Console();
-
 
 // start the console application
 $console->run();
