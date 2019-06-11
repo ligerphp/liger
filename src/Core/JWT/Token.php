@@ -1,3 +1,0 @@
-<?php
-
-// to validate tokens 
