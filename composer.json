@@ -1,5 +1,5 @@
 {
-    "name": "liger/framework",
+    "name": "liger/liger",
     "description": "The liger Framework for api developers.",
     "keywords": ["framework", "liger","php","api"],
     "license": "MIT",
@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "ligerphp/framework":"^2.0"
+        "liger/framework":"^2.0"
         },
     "autoload": {
         "classmap": [
